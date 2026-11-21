@@ -16,10 +16,11 @@ items = ["Apple","Orange","Banana" ]
 #Run Command: uvicorn main:app --host 0.0.0.0 --por-reload 
 #uvicorn main:app --reload
 # http://localhost:8000/
-@app.get("/items")
+@app.get("/api/items")
 def get_items():
     return {"items":items}
+'''
 frontend_path = Path(__file__).resolve().parent.parent / "frontend"
-app.mount("/", StaticFiles(directory="../frontend", html=True), name="frontend")
+app.mount("/", StaticFiles(directory="../frontend", html=True), name="frontend")'''
 
 
